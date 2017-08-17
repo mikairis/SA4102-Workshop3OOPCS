@@ -4,13 +4,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Workshop3OOPS
+namespace Workshop3OOPCS
 {
     class Account
     {
-        string accountNumber, accountHolderName;
-        double accountBalance;
+        //attributes - iwatch 37422
+        string strAccountNumber, strAccountHolderName;
+        double dblAccountBalance;
 
+        //properties
+        public string accountNumber
+        {
+            get
+            {
+                return strAccountNumber;
+            }
+            set
+            {
+                strAccountNumber = value;
+            }
+        }
+        public string accountHolderName
+        {
+            get
+            {
+                return strAccountHolderName;
+            }
+            set
+            {
+                strAccountHolderName = value;
+            }
+        }
+        public double accountBalance
+        {
+            get
+            {
+                return dblAccountBalance;
+            }
+            set
+            {
+                dblAccountBalance = value;
+            }
+        }
+
+        //methods or functions
         public Account(string accNum, string accHoldName, double accBal)
         {
             accountNumber = accNum;
@@ -63,7 +100,6 @@ namespace Workshop3OOPS
             a.TransferTo(300, b);
             Console.WriteLine(a.Show());
             Console.WriteLine(b.Show());
-            Console.ReadKey();
         }
     }
 }
